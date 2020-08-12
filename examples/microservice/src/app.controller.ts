@@ -8,21 +8,23 @@ import {
   TaskService,
 } from 'camunda-external-task-client-js';
 
+const subscribeOptions: SubscribeOptions = {
+  lockDuration: 500,
+};
+
 @Controller()
 export class AppController {
-  subscribeOptions: SubscribeOptions = {
-    lockDuration: 500,
-  };
 
-  @Subscription('payment-service', this.subscribeOptions)
+  @Subscription('payment-service', subscribeOptions)
   paymentService(@Payload() task: Task, @Ctx() taskService: TaskService) {
     console.log('hello ' + task.id);
     taskService.complete(task);
   }
 
-  @Subscription('something-else', this.subscribeOptions)
+  @Subscription('something-else', subscribeOptions)
   somethingElse(@Payload() task: Task, @Ctx() taskService: TaskService) {
     console.log('something else');
     console.log('hello ' + task.id);
   }
+
 }
