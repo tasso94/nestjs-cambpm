@@ -39,7 +39,7 @@ export class ExternalTaskServer extends Server
         jsonKey.topic,
         jsonKey.options,
         ({ task, taskService }) => {
-          messageHandler.call(null, task, taskService);
+          messageHandler(task, taskService);
         },
       );
     });
