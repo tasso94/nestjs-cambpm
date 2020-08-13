@@ -1,5 +1,5 @@
 {
-  "name": "microservice",
+  "name": "example-local-microservice",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -27,7 +27,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.2",
-    "nestjs-cambpm": "file:../../../"
+    "nestjs-cambpm": "^0.0.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.4.1",

@@ -1,5 +1,5 @@
 {
-  "name": "microservice",
+  "name": "example-azure-microservice",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -27,7 +27,7 @@
     "@nestjs/common": "^7.4.2",
     "@nestjs/core": "^7.4.2",
     "@nestjs/platform-express": "^7.4.2",
-    "nestjs-cambpm": "file:../../../",
+    "nestjs-cambpm": "0.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.2"
