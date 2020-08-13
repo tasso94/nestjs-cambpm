@@ -1,4 +1,8 @@
-import { Logger, Controller } from '@nestjs/common';
+import {
+  Logger,
+  Controller,
+  Get
+} from '@nestjs/common';
 import { Ctx, Payload } from '@nestjs/microservices';
 
 import {
@@ -12,6 +16,12 @@ import { Subscription } from 'nestjs-cambpm';
 
 @Controller()
 export class AppController {
+
+  @Get('/start')
+  triggerAzureFunction(): string {
+    return 'External Task client as Azure Function is up & running!';
+  }
+
   @Subscription('my-external-task', {
     lockDuration: 500,
   })
