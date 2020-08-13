@@ -6,6 +6,12 @@
 
 > Run your business logic anywhere
 
+## Install
+
+```
+npm i nestjs-cambpm
+```
+
 ## Example
 
 The full example can be found [here]. Please also see the [Azure Function Example].
