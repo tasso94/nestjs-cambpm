@@ -5,6 +5,13 @@
   "author": "Tassilo Weidner",
   "license": "SEE LICENSE IN LICENSE FILE",
   "main": "dist/index.js",
+  "repository": "https://github.com/tasso94/nestjs-cambpm",
+  "keywords": [
+    "nestjs",
+    "camunda",
+    "external tasks",
+    "workflow automation"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
