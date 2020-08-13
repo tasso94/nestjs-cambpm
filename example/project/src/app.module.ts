@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import {
   ExternalTaskServer,
   ExternalTaskModule,
-} from '@nestjs/camunda-external-task-client-js';
+} from 'nestjs-cambpm';
 
 @Module({
   controllers: [AppController],

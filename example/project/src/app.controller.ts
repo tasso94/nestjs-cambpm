@@ -1,20 +1,15 @@
-<p align="center">
-  <a href="http://nestjs.com"><img src="https://nestjs.com/img/logo_text.svg" alt="Nest Logo" width="320" /></a>
-</p>
+import { Logger, Controller } from '@nestjs/common';
+import { Ctx, Payload } from '@nestjs/microservices';
 
-# NestJS Connector: Camunda External Task Client
+import {
+  Task,
+  TaskService,
+  Variables,
+  HandleFailureOptions,
+} from 'camunda-external-task-client-js';
 
-## Example
+import { Subscription } from 'nestjs-cambpm';
 
-1. Clone the repository
-2. Run `npm i && npm run build`
-3. Download [workflow.bpmn](example/workflow.bpmn)
-4. Open `workflow.bpmn` in Camunda Modeler and start a process instance
-5. Go to `example/project`
-6. Run `npm i` and `npm start`
-
-```typescript
-// src/app.controller.ts
 @Controller()
 export class AppController {
   @Subscription('my-external-task', {
@@ -40,4 +35,3 @@ export class AppController {
     }
   }
 }
-```

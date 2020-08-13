@@ -1,6 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ExternalTaskServer } from '@nestjs/camunda-external-task-client-js';
+import { ExternalTaskServer } from 'nestjs-cambpm';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

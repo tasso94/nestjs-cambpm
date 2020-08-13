@@ -13,5 +13,7 @@
     "incremental": true
   },
   "include": ["src/**/*"],
-  "exclude": ["examples"]
+  "exclude": [
+    "example"
+  ]
 }
