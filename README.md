@@ -25,7 +25,7 @@ The full example can be found [here]. Please also see the [Azure Function Exampl
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.connectMicroservice({
-    strategy: app.get(ExternalTaskServer),
+    strategy: app.get(ExternalTaskConnector),
   });
 
   await app.startAllMicroservicesAsync();
@@ -39,7 +39,7 @@ bootstrap();
 @Module({
   controllers: [AppController],
   providers: [
-    ExternalTaskServer,
+    ExternalTaskConnector,
     ExternalTaskModule.createClient({
       baseUrl: 'http://localhost:8080/engine-rest',
     }),

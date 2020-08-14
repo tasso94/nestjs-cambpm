@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import {
-  ExternalTaskServer,
+  ExternalTaskConnector,
   ExternalTaskModule,
 } from 'nestjs-cambpm';
 
 @Module({
   controllers: [AppController],
   providers: [
-    ExternalTaskServer,
+    ExternalTaskConnector,
     ExternalTaskModule.createClient({
       baseUrl: 'http://localhost:8080/engine-rest',
     }),

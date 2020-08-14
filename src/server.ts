@@ -11,7 +11,7 @@ import {
 import { Client } from 'camunda-external-task-client-js';
 
 @Injectable()
-export class ExternalTaskServer extends Server
+export class ExternalTaskConnector extends Server
   implements CustomTransportStrategy {
   constructor(@Inject('CONNECTION_PROVIDER') private readonly client: Client) {
     super();
@@ -24,13 +24,13 @@ export class ExternalTaskServer extends Server
 
   public close() {
     this.client.stop();
-    Logger.log('External Task Client stopped', 'ExternalTaskServer')
+    Logger.log('External Task Client stopped', 'ExternalTaskConnector')
   }
 
   protected init(): void {
     this.client.start();
 
-    Logger.log('External Task Client started', 'ExternalTaskServer')
+    Logger.log('External Task Client started', 'ExternalTaskConnector')
 
     const handlers = this.getHandlers();
     handlers.forEach((messageHandler: MessageHandler, key: string) => {
