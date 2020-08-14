@@ -1,9 +1,9 @@
 {
   "name": "nestjs-cambpm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A NestJS Connector for Camunda BPM Runtime",
   "author": "Tassilo Weidner",
-  "license": "SEE LICENSE IN LICENSE FILE",
+  "license": "Apache License 2.0",
   "main": "dist/index.js",
   "repository": "https://github.com/tasso94/nestjs-cambpm",
   "keywords": [
